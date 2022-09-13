@@ -34,4 +34,26 @@ const steps = {
   }
 };
 
-console.log(steps);
+console.log(JSON.stringify(steps, null, 4));
+
+//helper functions
+function http_request(url) {
+  if (url === 'https://www.example.com') {
+    return 'Hello, world!';
+  }
+  throw Error('Bad url');
+}
+
+function string_reverse(string = '') {
+  return string.split('').reverse().join('');
+}
+
+function string_length(string = '') {
+  return string.length;
+}
+
+function save_file(filename = '', contents = '') {
+  console.log({ filename, contents });
+}
+
+function solution(x) {}
